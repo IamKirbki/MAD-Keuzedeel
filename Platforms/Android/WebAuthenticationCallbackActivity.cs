@@ -9,8 +9,4 @@ namespace MAD_Keuzedeel;
               Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
               DataScheme = "mad-keuzedeel",
               DataHost = "auth")]
-public class WebAuthenticationCallbackActivity : Microsoft.Maui.Authentication.WebAuthenticatorCallbackActivity
-{
-    //const string CALLBACK_SCHEME = "mad-keuzedeel";
-    //const string DATAHOST_SCHEME = "auth";
-}
+public class WebAuthenticationCallbackActivity : Microsoft.Maui.Authentication.WebAuthenticatorCallbackActivity {}
