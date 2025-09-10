@@ -8,7 +8,7 @@ public static class PkceUtils
         string codeChallenge = GenerateCodeChallenge(codeVerifier);
         string state = GenerateState();
 
-        return new Dictionary<string, string>
+        return new()
         {
             { "code_verifier", codeVerifier },
             { "code_challenge", codeChallenge },
@@ -27,7 +27,7 @@ public static class PkceUtils
 
     private static string GenerateCodeChallenge(string codeVerifier)
     {
-        byte[] sha256Bytes = System.Security.Cryptography.SHA256.HashData(
+        byte[] sha256Bytes = SHA256.HashData(
             System.Text.Encoding.UTF8.GetBytes(codeVerifier)
         );
         return Base64UrlEncode(sha256Bytes);
