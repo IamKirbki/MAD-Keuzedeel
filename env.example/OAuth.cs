@@ -1,6 +1,6 @@
 namespace MAD_Keuzedeel.env
 {
-    public static class OAuth
+    public static class OAuth_Example
     {
         public const string ApplicationId = "your_application_id_here";
         public const string SecretKey = "your_secret_key_here";

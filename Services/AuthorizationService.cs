@@ -128,7 +128,7 @@ class AuthorizationService
                 throw new Exception($"Failed to refresh auth data: {response.ReasonPhrase}");
 
             Auth newAuth = await response.Content.ReadFromJsonAsync<Auth>();
-            AuthStore.Update(newAuth);
+            AuthStore.Store(newAuth);
             _AUTH = newAuth;
             return newAuth;
         }

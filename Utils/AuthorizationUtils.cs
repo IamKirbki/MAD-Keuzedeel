@@ -70,6 +70,6 @@ public static class AuthorizationUtils
         Auth? auth = await AuthStore.Load();
         User? user = await UserStore.Load();
 
-        return !(string.IsNullOrEmpty(auth.id_token) || string.IsNullOrEmpty(user.name));
+        return !(auth == null || user == null);
     }
 }

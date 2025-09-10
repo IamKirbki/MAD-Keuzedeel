@@ -1,4 +1,6 @@
 ﻿using MAD_Keuzedeel.Models;
+using MAD_Keuzedeel.Utils;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,8 @@ namespace MAD_Keuzedeel.Stores
 {
     class UserStore : IStore<User>
     {
-        public static async Task<User?> Load() => JsonConvert.DeserializeObject<User>(await SecureStorage.Default.GetAsync("user_data")) ?? null;
-        public static async Task<User?> Store(User user) => await SecureStorage.Default.SetAsync("user_data", JsonConvert.SerializeObject(user));
-        public static async Task Delete() => await SecureStorage.Remove("user_data");
-        public static Task Update(User user) => Delete().ContinueWith(t => Store(user));
+        public static async Task<User?> Load() => JsonUtils.DeserializeStringToObject<User>(await SecureStorage.Default.GetAsync("user_data"));
+        public static async Task Store(User user) => await SecureStorage.Default.SetAsync("user_data", JsonConvert.SerializeObject(user));
+        public static async Task<bool> Delete() => SecureStorage.Remove("user_data");
     }
 }
