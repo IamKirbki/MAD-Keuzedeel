@@ -1,9 +1,12 @@
 ﻿using Microsoft.Extensions.Logging;
+using MAD_Keuzedeel.Services;
 
 namespace MAD_Keuzedeel
 {
     public static class MauiProgram
     {
+        public static AuthorizationService AuthService = new();
+        
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
