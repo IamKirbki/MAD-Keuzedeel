@@ -4,12 +4,13 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MAD_Keuzedeel"
+    xmlns:mainPage="clr-namespace:MAD_Keuzedeel.Pages.MainPage"
     Shell.FlyoutBehavior="Disabled"
     Title="MAD_Keuzedeel">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate mainPage:View}"
+        Route="MainPage"/>
 
 </Shell>
