@@ -29,6 +29,9 @@
 			</dict>
 		</array>
 
+		<key>NFCReaderUsageDescription</key>
+		<string>NFC tag to read the NFC tags in the books</string>
+
 		<key>UIDeviceFamily</key>
 		<array>
 			<integer>2</integer>
