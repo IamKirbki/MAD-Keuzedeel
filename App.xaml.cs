@@ -1,4 +1,6 @@
-﻿namespace MAD_Keuzedeel
+﻿using MAD_Keuzedeel.Pages.MainPage;
+
+namespace MAD_Keuzedeel
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new Pages.MainPage.View();
         }
     }
 }
