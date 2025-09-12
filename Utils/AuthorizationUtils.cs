@@ -1,7 +1,6 @@
 using MAD_Keuzedeel.env;
 using MAD_Keuzedeel.Models;
 using MAD_Keuzedeel.Stores;
-using System.Threading.Tasks;
 
 public static class AuthorizationUtils
 {
